@@ -126,3 +126,10 @@ openingHours.forEach((item) => {
   div.appendChild(hours);
   hoursContainer.appendChild(div);
 });
+
+//video
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // serve optimized video for mobile devices
+} else {
+  // serve default video for desktop devices
+}
