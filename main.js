@@ -128,8 +128,21 @@ openingHours.forEach((item) => {
 });
 
 //video
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  // serve optimized video for mobile devices
-} else {
-  // serve default video for desktop devices
+const video = document.querySelector('video');
+
+function resizeVideo() {
+  const aspectRatio = video.videoWidth / video.videoHeight;
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  const windowRatio = windowWidth / windowHeight;
+  if (windowRatio > aspectRatio) {
+    video.style.width = windowRatio * windowHeight + 'px';
+    video.style.height = windowHeight + 'px';
+  } else {
+    video.style.width = windowWidth + 'px';
+    video.style.height = windowWidth / windowRatio + 'px';
+  }
 }
+
+resizeVideo();
+window.addEventListener('resize', resizeVideo);

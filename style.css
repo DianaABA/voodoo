@@ -144,6 +144,15 @@ p {
     z-index: -1;
   }
   
+
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #fff;
+  }
+  
   
   /* Home Section */
   #home {
