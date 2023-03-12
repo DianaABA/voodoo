@@ -108,64 +108,64 @@ p {
   }
 
   /* Background video */
-  
-  #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-#my-video{
-  position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
-  #video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
+#my-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+#video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
   #video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
+    object-fit: cover;
   }
-  
-  @media (min-width: 768px) {
-    #video-container {
-      object-fit: cover;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    #video-container {
-      object-fit: contain;
-    }
-  }
-  
+}
 
-  .content {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    color: #fff;
+@media (max-width: 767px) {
+  #my-video {
+    object-fit: contain;
+    height: auto;
   }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+}
+
   /* Home Section */
   #home {
     padding: 100px 0;
