@@ -117,7 +117,7 @@ p {
     z-index: -1;
   }
 
-  z
+  
   
 
   #video-container {
@@ -126,7 +126,8 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+   object-fit: cover;
+   overflow: hidden;
     z-index: -1;
   }
   
@@ -140,14 +141,7 @@ p {
     z-index: -1;
   }
   
-  #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
+
 
   .content {
     position: relative;
