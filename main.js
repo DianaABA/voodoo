@@ -128,6 +128,7 @@ openingHours.forEach((item) => {
 });
 
 //video
+
 const video = document.querySelector('video');
 
 function resizeVideo() {
